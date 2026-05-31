@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARTVISION — Fine Art by Marcus Cole</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-mark">✦</span>
+      <span class="logo-text">ARTVISION</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+      <li><a href="#gallery" class="nav-link" data-page="gallery">Gallery</a></li>
+      <li><a href="#commission" class="nav-link" data-page="commission">Commission</a></li>
+      <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+      <li><a href="#cart" class="nav-link cart-link" data-page="cart">
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== PAGE: HOME ========== -->
+  <section class="page active" id="page-home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-bg">
+        <!-- Artist silhouette SVG as background -->
+        <svg class="artist-svg" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+          <!-- Studio background elements -->
+          <rect width="800" height="700" fill="#1a1008"/>
+          <!-- Window light -->
+          <rect x="560" y="0" width="240" height="420" fill="#c8a96e" opacity="0.12"/>
+          <rect x="560" y="0" width="240" height="420" fill="url(#windowGrad)" opacity="0.3"/>
+          <!-- Floor -->
+          <ellipse cx="400" cy="680" rx="380" ry="40" fill="#0d0804" opacity="0.6"/>
+          <!-- Canvas on easel -->
+          <rect x="290" y="140" width="180" height="240" rx="3" fill="#f5ede0" opacity="0.9"/>
+          <rect x="294" y="144" width="172" height="232" rx="2" fill="#e8d5b7" opacity="0.5"/>
+          <!-- Easel legs -->
+          <line x1="290" y1="380" x2="260" y2="560" stroke="#5c3d1e" stroke-width="8" stroke-linecap="round"/>
+          <line x1="470" y1="380" x2="500" y2="560" stroke="#5c3d1e" stroke-width="8" stroke-linecap="round"/>
+          <line x1="320" y1="380" x2="340" y2="560" stroke="#5c3d1e" stroke-width="6" stroke-linecap="round"/>
+          <line x1="445" y1="380" x2="425" y2="560" stroke="#5c3d1e" stroke-width="6" stroke-linecap="round"/>
+          <!-- Artist body -->
+          <ellipse cx="200" cy="330" rx="55" ry="70" fill="#2c1a0e"/>
+          <!-- Artist head -->
+          <circle cx="200" cy="245" r="40" fill="#d4956a"/>
+          <!-- Hair -->
+          <ellipse cx="200" cy="222" rx="42" ry="28" fill="#1a0f05"/>
+          <!-- Arm extended to canvas -->
+          <path d="M240 310 Q330 280 370 220" stroke="#d4956a" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <!-- Brush in hand -->
+          <line x1="368" y1="222" x2="330" y2="160" stroke="#8B6914" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="330" cy="158" r="5" fill="#c0392b"/>
+          <!-- Palette -->
+          <ellipse cx="155" cy="340" rx="30" ry="22" fill="#8B5E3C" transform="rotate(-15 155 340)"/>
+          <circle cx="148" cy="330" r="5" fill="#c0392b"/>
+          <circle cx="162" cy="327" r="4" fill="#2980b9"/>
+          <circle cx="156" cy="340" r="5" fill="#f39c12"/>
+          <circle cx="145" cy="343" r="4" fill="#27ae60"/>
+          <!-- Paint splatter on canvas -->
+          <circle cx="350" cy="200" r="8" fill="#c0392b" opacity="0.7"/>
+          <circle cx="390" cy="230" r="12" fill="#2980b9" opacity="0.6"/>
+          <circle cx="360" cy="270" r="6" fill="#f39c12" opacity="0.8"/>
+          <circle cx="410" cy="195" r="9" fill="#27ae60" opacity="0.6"/>
+          <!-- Paint strokes on canvas -->
+          <path d="M310 180 Q350 200 400 185" stroke="#c0392b" stroke-width="3" fill="none" opacity="0.6"/>
+          <path d="M305 230 Q370 215 440 235" stroke="#2980b9" stroke-width="4" fill="none" opacity="0.5"/>
+          <!-- Studio items -->
+          <rect x="520" y="400" width="60" height="120" rx="4" fill="#3d2b1f"/>
+          <rect x="530" y="390" width="40" height="20" rx="2" fill="#5c4433"/>
+          <!-- Decorative paint tubes -->
+          <rect x="80" y="500" width="12" height="60" rx="6" fill="#c0392b" transform="rotate(-20 80 500)"/>
+          <rect x="100" y="495" width="12" height="60" rx="6" fill="#2980b9" transform="rotate(10 100 495)"/>
+          <rect x="120" y="505" width="12" height="55" rx="6" fill="#f39c12" transform="rotate(-5 120 505)"/>
+          <defs>
+            <linearGradient id="windowGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fff8e7"/>
+              <stop offset="100%" stop-color="#c8a96e" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Contemporary Fine Art Studio — New York, USA</p>
+        <h1 class="hero-title">
+          Where Canvas<br />
+          <em>Meets</em> Soul
+        </h1>
+        <p class="hero-subtitle">Original paintings that transcend the ordinary — each stroke a story, each piece a world unto itself.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigateTo('gallery')">Explore Gallery</button>
+          <button class="btn-ghost" onclick="navigateTo('commission')">Commission a Piece</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">340+</span><span class="stat-label">Original Works</span></div>
+          <div class="stat-divider">|</div>
+          <div class="stat"><span class="stat-num">18</span><span class="stat-label">Years of Art</span></div>
+          <div class="stat-divider">|</div>
+          <div class="stat"><span class="stat-num">92</span><span class="stat-label">Countries Reached</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- FEATURED SECTION -->
+    <div class="section-featured">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Curated Selection</p>
+        <h2 class="section-title">Featured <em>Masterworks</em></h2>
+        <p class="section-sub">A handpicked collection of originals available for acquisition</p>
+      </div>
+      <div class="featured-grid">
+        <div class="art-card large" onclick="navigateTo('gallery')">
+          <div class="art-card-img" style="background: linear-gradient(135deg, #1a0533 0%, #6b21a8 40%, #c084fc 70%, #fde68a 100%);">
+            <div class="art-overlay-shapes">
+              <div class="shape s1"></div>
+              <div class="shape s2"></div>
+              <div class="shape s3"></div>
+            </div>
+          </div>
+          <div class="art-card-info">
+            <h3>Violet Dreams</h3>
+            <p class="art-medium">Oil on Canvas · 48" × 60"</p>
+            <div class="art-price-row">
+              <span class="art-price">$4,800</span>
+              <button class="btn-cart-sm" onclick="event.stopPropagation(); addToCart('Violet Dreams', 4800, 'Oil on Canvas')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-card" onclick="navigateTo('gallery')">
+          <div class="art-card-img" style="background: linear-gradient(160deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
+            <div class="art-overlay-shapes">
+              <div class="shape s4"></div>
+              <div class="shape s5"></div>
+            </div>
+          </div>
+          <div class="art-card-info">
+            <h3>Ocean Silence</h3>
+            <p class="art-medium">Acrylic · 36" × 36"</p>
+            <div class="art-price-row">
+              <span class="art-price">$2,200</span>
+              <button class="btn-cart-sm" onclick="event.stopPropagation(); addToCart('Ocean Silence', 2200, 'Acrylic')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-card" onclick="navigateTo('gallery')">
+          <div class="art-card-img" style="background: linear-gradient(145deg, #7f1d1d 0%, #dc2626 40%, #fca5a5 70%, #fef3c7 100%);">
+            <div class="art-overlay-shapes">
+              <div class="shape s6"></div>
+            </div>
+          </div>
+          <div class="art-card-info">
+            <h3>Crimson Horizon</h3>
+            <p class="art-medium">Oil on Canvas · 30" × 40"</p>
+            <div class="art-price-row">
+              <span class="art-price">$3,100</span>
+              <button class="btn-cart-sm" onclick="event.stopPropagation(); addToCart('Crimson Horizon', 3100, 'Oil on Canvas')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-row">
+        <button class="btn-outline" onclick="navigateTo('gallery')">View Full Gallery →</button>
+      </div>
+    </div>
+
+    <!-- QUOTE BAND -->
+    <div class="quote-band">
+      <div class="quote-inner">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Art is not what you see, but what you make others see.</p>
+        <span class="quote-attr">— Edgar Degas</span>
+      </div>
+    </div>
+
+    <!-- PROCESS SECTION -->
+    <div class="section-process">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ The Studio Process</p>
+        <h2 class="section-title">How Each <em>Piece</em> is Born</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Concept & Vision</h3>
+          <p>Every painting begins with a feeling — a moment, a memory, or an emotion that demands to be captured on canvas.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>Sketching & Composition</h3>
+          <p>Countless studies and sketches refine the composition until every element sings in perfect harmony.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Layers of Color</h3>
+          <p>Paint is applied in deliberate layers — building texture, depth, and luminosity over days or weeks of work.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>Final Refinement</h3>
+          <p>The piece rests, then returns for final touches — the last brushstrokes that bring everything to life.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== PAGE: GALLERY ========== -->
+  <section class="page" id="page-gallery">
+    <div class="page-hero small">
+      <h1 class="page-title">The <em>Gallery</em></h1>
+      <p class="page-subtitle">Original works available for immediate purchase</p>
+    </div>
+
+    <div class="gallery-controls">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Works</button>
+      <button class="filter-btn" onclick="filterGallery('oil', this)">Oil Paintings</button>
+      <button class="filter-btn" onclick="filterGallery('acrylic', this)">Acrylic</button>
+      <button class="filter-btn" onclick="filterGallery('watercolor', this)">Watercolor</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ========== PAGE: COMMISSION ========== -->
+  <section class="page" id="page-commission">
+    <div class="page-hero small">
+      <h1 class="page-title">Commission a <em>Custom</em> Piece</h1>
+      <p class="page-subtitle">A painting made entirely for you — your story, your vision, your heirloom</p>
+    </div>
+
+    <div class="commission-body">
+      <div class="commission-info">
+        <h2>How It Works</h2>
+        <div class="commission-steps">
+          <div class="c-step">
+            <span class="c-num">1</span>
+            <div>
+              <h4>Submit Your Inquiry</h4>
+              <p>Fill out the form with your vision, size preferences, and timeline.</p>
+            </div>
+          </div>
+          <div class="c-step">
+            <span class="c-num">2</span>
+            <div>
+              <h4>Consultation Call</h4>
+              <p>We schedule a 30-minute call to discuss your vision in detail.</p>
+            </div>
+          </div>
+          <div class="c-step">
+            <span class="c-num">3</span>
+            <div>
+              <h4>Proposal & Deposit</h4>
+              <p>You receive a detailed proposal. A 50% deposit begins the work.</p>
+            </div>
+          </div>
+          <div class="c-step">
+            <span class="c-num">4</span>
+            <div>
+              <h4>Creation & Delivery</h4>
+              <p>Progress photos kept throughout. Final balance on completion.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-guide">
+          <h3>Pricing Guide</h3>
+          <div class="price-table">
+            <div class="price-row"><span>Small (up to 16"×20")</span><span>From $800</span></div>
+            <div class="price-row"><span>Medium (up to 24"×36")</span><span>From $1,800</span></div>
+            <div class="price-row"><span>Large (up to 36"×48")</span><span>From $3,200</span></div>
+            <div class="price-row"><span>Extra Large (48"+)</span><span>From $5,500</span></div>
+          </div>
+          <p class="price-note">* Final pricing depends on complexity, medium, and timeline.</p>
+        </div>
+      </div>
+
+      <div class="commission-form-wrap">
+        <h2>Send Your Inquiry</h2>
+        <div class="commission-form" id="commissionForm">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="cName" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="cEmail" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="cPhone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Size</label>
+              <select id="cSize">
+                <option value="">Select size</option>
+                <option>Small (up to 16"×20")</option>
+                <option>Medium (up to 24"×36")</option>
+                <option>Large (up to 36"×48")</option>
+                <option>Extra Large (48"+)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Medium</label>
+              <select id="cMedium">
+                <option value="">Select medium</option>
+                <option>Oil on Canvas</option>
+                <option>Acrylic on Canvas</option>
+                <option>Watercolor</option>
+                <option>Mixed Media</option>
+                <option>Open to Suggestion</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Budget Range</label>
+            <select id="cBudget">
+              <option value="">Select budget</option>
+              <option>$500 – $1,000</option>
+              <option>$1,000 – $2,500</option>
+              <option>$2,500 – $5,000</option>
+              <option>$5,000 – $10,000</option>
+              <option>$10,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Timeline</label>
+            <select id="cTimeline">
+              <option value="">Select timeline</option>
+              <option>1–2 months</option>
+              <option>3–4 months</option>
+              <option>5–6 months</option>
+              <option>Flexible / No rush</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Describe Your Vision *</label>
+            <textarea id="cVision" rows="5" placeholder="Tell me about the subject, mood, colors, style, or any references you have in mind..."></textarea>
+          </div>
+          <button class="btn-primary full-width" onclick="submitCommission()">Send Commission Inquiry →</button>
+          <div class="form-success" id="commissionSuccess">
+            <span>✦</span> Thank you! Your inquiry has been received. Marcus will be in touch within 48 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE: ABOUT ========== -->
+  <section class="page" id="page-about">
+    <div class="about-hero">
+      <div class="about-artist-visual">
+        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="about-svg">
+          <rect width="400" height="500" fill="#f5ede0"/>
+          <!-- Abstract background -->
+          <circle cx="300" cy="80" r="120" fill="#c8a96e" opacity="0.15"/>
+          <circle cx="80" cy="400" r="100" fill="#8B3A3A" opacity="0.1"/>
+          <!-- Artist figure -->
+          <rect x="140" y="180" width="120" height="200" rx="10" fill="#2c1a0e"/>
+          <circle cx="200" cy="150" r="55" fill="#d4956a"/>
+          <ellipse cx="200" cy="118" rx="58" ry="38" fill="#1a0f05"/>
+          <!-- Beard -->
+          <path d="M165 175 Q200 195 235 175 Q230 200 200 205 Q170 200 165 175" fill="#1a0f05" opacity="0.7"/>
+          <!-- Eyes -->
+          <circle cx="183" cy="152" r="7" fill="#1a0f05"/>
+          <circle cx="217" cy="152" r="7" fill="#1a0f05"/>
+          <circle cx="185" cy="150" r="3" fill="#fff"/>
+          <circle cx="219" cy="150" r="3" fill="#fff"/>
+          <!-- Smile -->
+          <path d="M185 170 Q200 180 215 170" stroke="#1a0f05" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Palette -->
+          <ellipse cx="145" cy="310" rx="35" ry="25" fill="#8B5E3C" transform="rotate(-10 145 310)"/>
+          <circle cx="136" cy="298" r="6" fill="#c0392b"/>
+          <circle cx="152" cy="296" r="5" fill="#2980b9"/>
+          <circle cx="160" cy="308" r="6" fill="#f39c12"/>
+          <circle cx="140" cy="315" r="5" fill="#27ae60"/>
+          <!-- Award/medal -->
+          <circle cx="260" cy="240" r="18" fill="#d4af37" stroke="#b8962e" stroke-width="2"/>
+          <text x="260" y="246" text-anchor="middle" font-size="14" fill="#7a5c00">★</text>
+          <!-- Signature on bottom -->
+          <text x="200" y="470" text-anchor="middle" font-family="'Playfair Display', serif" font-size="22" fill="#2c1a0e" font-style="italic">Marcus Cole</text>
+          <line x1="120" y1="478" x2="280" y2="478" stroke="#c8a96e" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="about-text-block">
+        <p class="section-eyebrow">✦ The Artist</p>
+        <h1 class="about-name">Marcus Cole</h1>
+        <p class="about-tagline">Fine Artist · New York, USA</p>
+        <p class="about-bio">
+          Born and raised in Brooklyn, Marcus Cole discovered his love for painting at age seven, watching sunlight dance through the studio window of his grandfather's apartment. What began as childhood wonder evolved into a lifelong devotion to capturing the ineffable beauty of the human experience on canvas.
+        </p>
+        <p class="about-bio">
+          After studying at the School of Visual Arts in New York and training under masters in Florence, Italy, Marcus developed a signature style that blends the luminous technique of the Old Masters with the raw emotional intensity of contemporary expressionism.
+        </p>
+        <p class="about-bio">
+          His work has been exhibited in galleries across New York, London, Dubai, and Tokyo — and collected by art lovers in over 92 countries. Each painting is a window into a world where color and emotion are one.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <span class="h-num">2006</span>
+            <span class="h-label">School of Visual Arts, New York</span>
+          </div>
+          <div class="highlight">
+            <span class="h-num">2009</span>
+            <span class="h-label">Florence Atelier Training, Italy</span>
+          </div>
+          <div class="highlight">
+            <span class="h-num">2014</span>
+            <span class="h-label">First Solo Gallery Show, NYC</span>
+          </div>
+          <div class="highlight">
+            <span class="h-num">2020</span>
+            <span class="h-label">International Recognition Award</span>
+          </div>
+        </div>
+        <div class="about-cta-row">
+          <button class="btn-primary" onclick="navigateTo('commission')">Commission a Piece</button>
+          <button class="btn-outline" onclick="navigateTo('gallery')">View Gallery</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="exhibitions-section">
+      <div class="section-header">
+        <p class="section-eyebrow">✦ Exhibitions & Press</p>
+        <h2 class="section-title">Featured In & <em>Exhibited At</em></h2>
+      </div>
+      <div class="exhibitions-list">
+        <div class="exhibit-item"><span class="exhibit-year">2024</span><span class="exhibit-name">Metropolitan Arts Gallery, New York</span><span class="exhibit-type">Solo Show</span></div>
+        <div class="exhibit-item"><span class="exhibit-year">2023</span><span class="exhibit-name">Dubai International Art Fair</span><span class="exhibit-type">Group Exhibition</span></div>
+        <div class="exhibit-item"><span class="exhibit-year">2022</span><span class="exhibit-name">Tate Modern Emerging Artists, London</span><span class="exhibit-type">Featured</span></div>
+        <div class="exhibit-item"><span class="exhibit-year">2021</span><span class="exhibit-name">Art Basel Miami Beach</span><span class="exhibit-type">Group Exhibition</span></div>
+        <div class="exhibit-item"><span class="exhibit-year">2019</span><span class="exhibit-name">Tokyo Contemporary Art Week</span><span class="exhibit-type">Solo Show</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE: CART ========== -->
+  <section class="page" id="page-cart">
+    <div class="page-hero small">
+      <h1 class="page-title">Your <em>Collection</em></h1>
+      <p class="page-subtitle">Pieces you've selected for acquisition</p>
+    </div>
+    <div class="cart-body">
+      <div class="cart-items" id="cartItems">
+        <!-- Injected by JS -->
+      </div>
+      <div class="cart-empty" id="cartEmpty">
+        <div class="empty-icon">🎨</div>
+        <h3>Your cart is empty</h3>
+        <p>Browse the gallery and add pieces that speak to you.</p>
+        <button class="btn-primary" onclick="navigateTo('gallery')">Explore Gallery</button>
+      </div>
+      <div class="cart-summary" id="cartSummary" style="display:none">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">$0</span></div>
+          <div class="summary-row"><span>Shipping & Insurance</span><span>Calculated at checkout</span></div>
+          <div class="summary-row total"><span>Total</span><span id="summaryTotal">$0</span></div>
+          <button class="btn-primary full-width" onclick="checkout()">Proceed to Checkout →</button>
+          <p class="cart-note">All original paintings come with a Certificate of Authenticity, professional packing, and fully insured shipping worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text">ARTVISION</span>
+        <p>Original fine art paintings by Marcus Cole, created in his Brooklyn studio.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#" onclick="navigateTo('home')">Home</a>
+        <a href="#" onclick="navigateTo('gallery')">Gallery</a>
+        <a href="#" onclick="navigateTo('commission')">Commission</a>
+        <a href="#" onclick="navigateTo('about')">About</a>
+        <a href="#" onclick="navigateTo('cart')">Cart</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>studio@artvisionnyc.com</p>
+        <p>+1 (212) 555-0198</p>
+        <p>Brooklyn, New York, USA</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ARTVISION. All rights reserved. | <strong>Created by Nayyar Hussain</strong></p>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
