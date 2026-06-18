@@ -822,10 +822,25 @@ textarea { resize: vertical; min-height: 120px; }
 .footer-contact p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem; }
 .footer-bottom {
   padding: 1.5rem 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
-.footer-bottom strong { color: var(--gold); }
+.footer-credit { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
+.footer-credit-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.footer-credit-link:hover { color: #e8c97e; }
+
 
 /* ===== TOAST ===== */
 .toast {
